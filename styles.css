@@ -20,6 +20,7 @@ body{
     margin: 10px;
     width: 300px;
 }
+
 button[type="submit"] {
     padding: 10px 20px;
     font-weight: bold;
@@ -36,11 +37,15 @@ button[type="submit"]:hover {
 .card{
     background: linear-gradient(180deg, hsl(210, 100%, 66%), hsl(40, 100%, 75%));
     padding: 50px;
+    border-radius: 10px;
     box-shadow: 2px 2px 5px hsla(0, 0, 0, 0.5);
     min-width: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+
 }
 h1{
     margin-top: 0;
@@ -56,9 +61,21 @@ p{
     color: hsla(0, 0%, 0%, 0.75);
     margin-bottom: 25px;
 }
-.humidityDisplay{
-    font-weight: bold;
-    margin-bottom: 25px;
+.humidityDisplay {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 20px;
+    position: relative;
+}
+.humidityBar{
+    box-sizing: border-box;
+    padding-left: 10%;
+    color: hsla(0, 0%, 0%, 0.60);
+    height: 100%;
+    background-color: hsl(210, 100%, 66%);
+    border-radius: 5px 0 0 5px;
 }
 .descDisplay{
     font-style: italic;
